@@ -11,12 +11,71 @@
       font-weight: 600;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
+      .intro-hero {
+          position: relative;
+          background: linear-gradient(
+              180deg,
+              rgba(143, 214, 234, 0.8),
+              rgba(91, 166, 70, 0.8)
+            ),
+            url('assets/img/IMG_2619.jpg') center/cover no-repeat;
+          color: white;
+          padding: 9rem 0;
+          text-align: center;
+        }
 
-    .page-header{
-      padding: 3rem 0 1.5rem;
-      text-align: center;
-    }
+.intro-hero .overlay-box {
+  background: linear-gradient(
+    180deg,
+    rgb(143, 214, 234),
+    rgba(143, 214, 234, 0.7)
+  );
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 
+  /* Center horizontally */
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.intro-hero .text-center {
+  text-align: center;
+}
+
+  .intro_company_name{
+    font-size: 50px !important;
+    color: white;
+  }
+  .intro_company_tagline{
+    font-size: 28px !important;
+  }
+.section-title{
+  font-size: 45px !important;
+      color: white;
+}
+.intro-hero p.lead {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.intro-logo {
+  max-width: 300px;
+}
+.intro_p_sentences{
+  font-size: 18px;
+}
+
+.introduction-section .section-title {
+  color: #fff;
+
+}
+
+.introduction-section p {
+  color: #f1f1f1;
+  font-size: 18px !important;
+}
     /* Company card */
     .company-card{
       background: var(--card-bg);
@@ -345,4 +404,16 @@
 
 #modalCompany9 .swiper-slide .card-img-top{
   min-height: 220px;
+}
+
+.our_group_title {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(143, 214, 234, 0.95) 0%, /* light blue top */
+    rgba(143, 214, 234, 0.7) 100% /* darker blue bottom */
+  );
+  color: white; /* better contrast */
+  border-radius: 15px;
 }

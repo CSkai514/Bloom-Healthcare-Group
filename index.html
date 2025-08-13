@@ -34,18 +34,56 @@
     </div>
   </div>
 </nav>
+<section class="intro-hero">
+  <div class="text-center">
+    <h1 class="h1 mb-2 intro_company_name">BLOOM HEALTHCARE GROUP</h1>
+    <p class="lead mb-4 intro_company_tagline">Comprehensive Care, Trusted Network</p>
+  </div>
+  <br>
+  <br>
+  <div class="container py-4">
+    <div class="row align-items-center">
+      <!-- Left: Logo -->
+      <div class="col-lg-4 text-center mb-3 mb-lg-0">
+        <img src="assets/image/logo.webp" alt="Bloom Healthcare Logo" class="img-fluid intro-logo">
+      </div>
 
-  <header class="page-header container">
-    <h1 class="h3 mb-2">BLOOM HEALTHCARE GROUP</h1>
-    <p class="text-muted mb-0">Comprehensive Care, Trusted Network</p>
-  </header>
+      <!-- Right: Short Intro -->
+      <div class="col-lg-8">
+        <h1 class="section-title">Introduction</h1>
+        <p class="intro_p_sentences">
+          Bloom Healthcare is a leading provider of integrated healthcare services in Malaysia. 
+          Our comprehensive facilities include wellness and medical care services, dental services, 
+          and aesthetic services. We are committed to delivering high-quality care through advanced 
+          technology and a cohesive approach, ensuring that all your healthcare needs are met 
+          efficiently and effectively under one roof. Our group’s mission is to integrate modern 
+          healthcare technologies with personalized patient care. From preventive wellness programs 
+          to advanced medical treatments, we aim to make healthcare more accessible, efficient, 
+          and patient-focused.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
   
   <main class="container py-4">
     <section id="our_group">
     <div class="row g-4">
+      <h1 class="our_group_title"> Member of Bloom Healthcare Group</h1>
+      <div class="mb-4 text-center">
+        <button class="btn btn-outline-primary filter-btn" data-filter="*">Show All</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter=".filter-aestheticclinic">Clinics</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter=".filter-dental">Dental</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter=".filter-dental_northern">Dental(Northern)</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter=".filter-gp">General Practitioner</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter=".filter-spa">Spa & Wellness</button>
+        
 
+         
+      </div>
       <!-- Card 1 -->
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 filter-aestheticclinic">
         <div class="company-card flex-column-on-mobile">
           <!-- left: logo -->
           <div class="logo-box">
@@ -80,7 +118,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 filter-aestheticclinic">
         <div class="company-card flex-column-on-mobile">
           <div class="logo-box">
             <img src="assets/image/250320-cantiq-logo.webp" alt="Cantiq Clinic logo">
@@ -114,7 +152,7 @@
 
       <!-- Duplicate more cards as needed -->
       <!-- Card 3 -->
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 filter-spa">
         <div class="company-card flex-column-on-mobile">
           <div class="logo-box">
             <img src="assets/image/250320-antara-logo.webp" alt="Antara Spa logo">
@@ -145,7 +183,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 filter-gp">
         <div class="company-card flex-column-on-mobile">
           <div class="logo-box">
             <img src="assets/image/250320-medipulih-logo.webp" alt="MediPulih logo">
@@ -172,7 +210,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 filter-dental">
         <div class="company-card flex-column-on-mobile">
           <div class="logo-box">
             <img src="assets/image/KHENG_Logo_RGB_Grey.webp" alt="KHENG logo">
@@ -206,7 +244,7 @@
       </div>
     </div>
     
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 filter-dental">
         <div class="company-card flex-column-on-mobile">
           <div class="logo-box">
             <img src="assets/image/241011-tulen-update-jawi-logo.webp" alt="Tulen logo">
@@ -240,7 +278,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 filter-dental_northern">
         <div class="company-card flex-column-on-mobile">
           <div class="logo-box">
             <img src="assets/image/wong-SIM.webp" alt="wong sim logo">
@@ -274,7 +312,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 filter-dental_northern">
         <div class="company-card flex-column-on-mobile">
           <div class="logo-box">
             <img src="assets/image/Tria-Dental-Specialist.webp" alt="Joy dental logo">
@@ -307,7 +345,7 @@
         </div>
       </div>
 
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 filter-dental_northern">
         <div class="company-card flex-column-on-mobile">
           <div class="logo-box">
             <img src="assets/image/JOY_Dental-Logo4-01.webp" alt="Joy dental logo">
@@ -1528,7 +1566,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
@@ -1589,5 +1626,28 @@ document.getElementById("btnSend").addEventListener("click", function() {
   });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".row.g-4 > .col-12");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+
+      cards.forEach(card => {
+        if (filter === "*" || card.classList.contains(filter.replace('.', ''))) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+      buttons.forEach(b => b.classList.remove("active"));
+      button.classList.add("active");
+    });
+  });
+});
+</script>
+
 </body>
 </html>
