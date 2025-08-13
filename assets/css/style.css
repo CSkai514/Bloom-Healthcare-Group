@@ -49,6 +49,10 @@
   }
   .intro_company_tagline{
     font-size: 28px !important;
+    border-bottom: 6px solid white;
+    padding-bottom: 20px;
+    width: 80%;
+    margin: auto;
   }
 .section-title{
   font-size: 45px !important;
@@ -433,4 +437,25 @@
   position: absolute; /* takes it out of the flow without snapping */
   opacity: 0;
   transform: scale(0.95);
+}
+
+#bloom_branches .outer-border{
+  border-radius: 20px;
+  border-top: 4px solid rgb(143, 214, 234);
+  padding: 8px;
+}
+
+.filter-btn.btn-primary{
+  background-color: rgb(143, 214, 234) !important;
+  border-color: rgb(143, 214, 234) !important;
+  color: white !important;
+}
+
+.filter-btn.btn-outline-primary{
+  border-color: rgb(143, 214, 234) !important;
+  color: black !important;
+}
+
+.filter-btn.btn-outline-primary:hover{
+  background-color: rgb(143, 214, 234) !important;
 }
