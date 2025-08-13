@@ -1614,23 +1614,35 @@ document.getElementById("btnSend").addEventListener("click", function() {
 });
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".filter-btn");
-  const cards = document.querySelectorAll(".row.g-4 > .col-12");
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = Array.from(document.querySelectorAll('#our_group .col-12.col-md-6'));
+  cards.forEach(c => c.classList.add('card-fx'));
 
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      const filter = button.getAttribute("data-filter");
+  document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      let filterValue = button.getAttribute('data-filter') || 'all';
+      const normalized = filterValue.startsWith('.') ? filterValue.slice(1) : filterValue;
+      const showAll = normalized === 'all' || normalized === '*';
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-outline-primary');
+      });
+      button.classList.add('btn-primary');
+      button.classList.remove('btn-outline-primary');
 
       cards.forEach(card => {
-        if (filter === "*" || card.classList.contains(filter.replace('.', ''))) {
-          card.style.display = "block";
+        const shouldShow = showAll || card.classList.contains(normalized);
+
+        if (shouldShow) {
+          card.classList.remove('is-hiding', 'hidden');
         } else {
-          card.style.display = "none";
+          card.classList.add('is-hiding');
+          setTimeout(() => {
+            card.classList.add('hidden');
+          }, 400);
         }
       });
-      buttons.forEach(b => b.classList.remove("active"));
-      button.classList.add("active");
     });
   });
 });

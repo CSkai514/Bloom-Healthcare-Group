@@ -417,3 +417,20 @@
   color: white; /* better contrast */
   border-radius: 15px;
 }
+.card-fx {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card-fx.is-hiding {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none; /* prevents clicks while hidden */
+}
+
+.card-fx.hidden {
+  position: absolute; /* takes it out of the flow without snapping */
+  opacity: 0;
+  transform: scale(0.95);
+}
