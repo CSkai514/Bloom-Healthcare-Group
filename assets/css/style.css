@@ -1,0 +1,348 @@
+:root{
+      --bg:#071a2a;      /* page background */
+      --card-bg: #8fd6ea;
+      --accent:#0db0ff;
+      --logo-box:#ffffff; /* logo background box */
+      --muted: rgba(0, 0, 0, 0.8);
+    }
+
+    body{
+      /* background: var(--bg); */
+      font-weight: 600;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .page-header{
+      padding: 3rem 0 1.5rem;
+      text-align: center;
+    }
+
+    /* Company card */
+    .company-card{
+      background: var(--card-bg);
+      border-radius: 18px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      min-height: 380px;
+      transition: transform .15s ease, box-shadow .15s ease;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    .company-card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+
+    /* Layout: stack on small screens, row on md+ */
+    .company-card.flex-column-on-mobile{
+      flex-direction: column;
+    }
+    @media(min-width:768px){
+      .company-card.flex-column-on-mobile{
+        flex-direction: row;
+      }
+    }
+    .navbar{
+        background-color: rgb(143, 214, 234);
+    }
+    /* Logo box */
+    .logo-box{
+      background: var(--logo-box);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      flex-shrink: 0;
+      width: 160px;   /* fixed logo column width on desktop */
+      /* height: 110px; */
+      min-height: 160px;
+    }
+    @media (max-width:767.98px){
+      .logo-box{
+        width: 100%;
+        height: 80px;
+        margin-bottom: 6px;
+      }
+    }
+    .logo-box img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Content */
+    .company-content h5{
+      color: #000000;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .company-content p.desc{
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .company-content small.muted{
+      color: rgba(0, 0, 0, 0.75);
+      display:block;
+      margin-bottom: .35rem;
+      font-size: 18px;
+    }
+
+    /* Social icons */
+    .social-icons a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:#ffffff;
+      color:var(--bg);
+      margin-right:8px;
+      text-decoration:none;
+      font-size:16px;
+      transition: transform .12s ease, background .12s ease;
+    }
+    .social-icons a:hover{ transform: translateY(-3px); }
+
+    @media screen and (max-width: 768px) {
+      .social-icons{
+        width: 100%;
+      }
+      
+    }
+
+    /* small details area */
+    .card-footer-row{
+      display:flex;
+      gap: 0.75rem;
+      align-items:center;
+      justify-content: space-between;
+      margin-top:8px;
+      flex-wrap:wrap;
+    }
+
+    /* button style */
+    .btn-discover{
+      background: linear-gradient(90deg,#f37372, #e96363 120%);
+      border: none;
+      color: #002233;
+      font-weight:700 !important;
+      padding: .5rem .9rem;
+      border-radius: 999px;
+    }
+    .modal-title{
+      font-size: 25px;
+    }
+  /* Make Swiper slides responsive */
+.swiper-slide {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: auto; /* let Swiper decide width */
+  max-width: 350px; /* limit max size on desktop */
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 767px) {
+  .swiper-slide {
+    max-width: 85%; /* show most of the card */
+  }
+   .modal-title{
+      font-size: 20px;
+    }
+}
+
+/* Image adjustments */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fade edges */
+.swiper::before, .swiper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+    background: none !important;
+}
+.swiper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+.swiper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+/* Pagination spacing */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 15px;
+}
+  .card-img-top{
+    max-height: 350px;
+  }
+  .card{
+    max-width: 350px;
+  }
+  .card-body{
+    color: white;
+  }
+  .popout-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  padding: 15px;
+  
+}
+.card-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  border-top: 6px solid rgb(143, 214, 234);
+}
+
+/* Input and textarea styling */
+.card-container input,
+.card-container textarea {
+  border: 2px solid rgba(143, 214, 234, 0.5);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.card-container input:focus,
+.card-container textarea:focus {
+  outline: none;
+  border-color: rgb(143, 214, 234);
+  box-shadow: 0 0 8px rgba(143, 214, 234, 0.5);
+}
+
+/* Button styling */
+.form_column_btnSend {
+  background: rgb(143, 214, 234);
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form_column_btnSend:hover {
+  background: rgb(123, 194, 214);
+  transform: translateY(-2px);
+}
+
+/* Placeholder color */
+.card-container ::placeholder {
+  color: rgba(0,0,0,0.5);
+}
+
+/* Form spacing */
+.card-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#btnSend {
+    background-color: rgb(143, 214, 234);
+    color: #003344; /* dark text for readability */
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto; /* center horizontally */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#btnSend:hover {
+    background-color: rgb(123, 194, 214);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.site-footer {
+    background-color: rgb(143, 214, 234);
+    border-top: 1px solid #ddd;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #000000;
+}
+
+.footer-left img {
+    max-height: 40px;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Make sure footer content stacks on small screens */
+@media (max-width: 600px) {
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-left {
+        margin-bottom: 10px;
+    }
+}
+
+.swiper-button-next, .swiper-button-prev{
+  color: black;
+}
+
+/* Cantiq */
+#modalCompany2 .swiper-slide .card-body{
+  min-height: 300px;
+}
+
+/* Medipulih */
+#modalCompany4 .swiper-slide .card-body{
+  min-height: 240px;
+}
+
+/* Kheng Dental */
+#modalCompany5 .swiper-slide .card-body{
+  min-height: 240px;
+}
+
+/* Tulen */
+#modalCompany6 .swiper-slide .card-body{
+  min-height: 220px;
+}
+
+/* Joydental */
+#modalCompany9 .swiper-slide .card-body{
+  min-height: 220px;
+}
+
+#modalCompany9 .swiper-slide .card-img-top{
+  min-height: 220px;
+}
